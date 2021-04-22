@@ -43,26 +43,63 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
+
+
+        
+   'mysql' => [
+    'driver' => 'mysql',
+    'host' => 'us-mm-auto-dca-03-b.cleardb.net',
+    'database' => 'heroku_d65238418c6e215',
+    'username' => 'bd59f7b9a3d4fd',
+    'password' => 'c4cf2ff4',
+    'charset' => 'utf8mb4',
+    'collation' => 'utf8mb4_unicode_ci',
+    'prefix' => '',
+    'strict' => false,
+
+
+  ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       
-       'mysql' => [
-            'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' =>'clothes',
-            'username' =>'messi',
-            'password' =>'nymar',
-            'unix_socket' => env('DB_SOCKET', ''),
-            'charset' => 'utf8mb4',
-            'collation' => 'utf8mb4_unicode_ci',
-            'prefix' => '',
-            'prefix_indexes' => true,
-            'strict' => true,
-            'engine' => null,
-            'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-            ]) : [],
-            ],
+    //    'mysql' => [
+    //         'driver' => 'mysql',
+    //         'url' => env('DATABASE_URL'),
+    //         'host' => env('DB_HOST', '127.0.0.1'),
+    //         'port' => env('DB_PORT', '3306'),
+    //         'database' =>'clothes',
+    //         'username' =>'messi',
+    //         'password' =>'nymar',
+    //         'unix_socket' => env('DB_SOCKET', ''),
+    //         'charset' => 'utf8mb4',
+    //         'collation' => 'utf8mb4_unicode_ci',
+    //         'prefix' => '',
+    //         'prefix_indexes' => true,
+    //         'strict' => true,
+    //         'engine' => null,
+    //         'options' => extension_loaded('pdo_mysql') ? array_filter([
+    //             PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+    //         ]) : [],
+    //         ],
         
 
         'pgsql' => [
