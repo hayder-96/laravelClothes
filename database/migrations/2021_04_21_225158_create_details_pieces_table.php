@@ -17,6 +17,7 @@ class CreateDetailsPiecesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('size');
+            $table->string('numsize');
             $table->string('color');
             $table->unsignedBigInteger('accept_id');
             $table->string('image');

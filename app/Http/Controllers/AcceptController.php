@@ -24,7 +24,12 @@ class AcceptController extends BaseController
         return $this->Respone($clothes,200);
     }
 
-   
+
+
+
+
+
+
 
 
 
@@ -63,7 +68,9 @@ class AcceptController extends BaseController
    
     public function show($id)
     {
-        //
+        
+       
+
     }
 
   
