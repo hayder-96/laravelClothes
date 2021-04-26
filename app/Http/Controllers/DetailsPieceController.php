@@ -49,7 +49,8 @@ class DetailsPieceController extends BaseController
             'name',
         'size',
         'color',
-        'accept_id'
+        'accept_id',
+        'clothes_id'
            
             
         ]);

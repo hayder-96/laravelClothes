@@ -13,7 +13,6 @@ class accept extends Model
     protected $fillable = [
             'phone',
             'name',
-            'clothes_id',
             'adress',
             'user_id',
             'enable',

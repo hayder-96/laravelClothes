@@ -17,7 +17,6 @@ class CreateAcceptsTable extends Migration
             $table->id();
             $table->string('phone');
             $table->string('name');
-            $table->string('clothes_id');
             $table->string('adress');
             $table->Integer('user_id');
             $table->string('enable');

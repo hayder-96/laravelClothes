@@ -14,6 +14,7 @@ class DetailsPiece extends Model
             'size',
             'color',
             'accept_id',
-            'image'
+            'image',
+            'clothes_id'
     ];
 }

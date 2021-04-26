@@ -43,7 +43,6 @@ class AcceptController extends BaseController
 
             'phone',
             'name',
-            'clothes_id',
             'adress'
            
             
