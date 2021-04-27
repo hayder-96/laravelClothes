@@ -56,6 +56,10 @@ Route::middleware('admin:admin')->group(function(){
 
 
 
+    Route::resource('delete',DetailsPieceController::class);
+
+
+
 
     Route::put('updatenoty/{id}',[AcceptController::class,'updatee']);
 

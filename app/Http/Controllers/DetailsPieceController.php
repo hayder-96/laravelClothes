@@ -106,8 +106,16 @@ class DetailsPieceController extends BaseController
      * @param  \App\Models\DetailsPiece  $detailsPiece
      * @return \Illuminate\Http\Response
      */
-    public function destroy(DetailsPiece $detailsPiece)
+    public function destroy($id)
     {
-        //
+        
+
+        $clothes=DetailsPiece::find($id);
+
+        $clothes->delete();
+
+        
+
+
     }
 }

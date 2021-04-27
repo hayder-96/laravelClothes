@@ -6,6 +6,7 @@ use App\Models\notifay;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Resources\noty;
 class NotifayController extends BaseController
 {
   
@@ -15,7 +16,7 @@ class NotifayController extends BaseController
         
         $clothes=notifay::all()->where('user_id',Auth::id())->where('noty','no');
 
-        return $this->Respone($clothes,200);
+        return $this->Respone(noty::collection($clothes),200);
     }
 
 
@@ -26,7 +27,7 @@ class NotifayController extends BaseController
         
         $clothes=notifay::all()->where('user_id',Auth::id())->where('noty','yes');
 
-        return $this->Respone($clothes,200);
+        return $this->Respone(noty::collection($clothes),200);
     }
 
 
@@ -36,7 +37,7 @@ class NotifayController extends BaseController
         
         $clothes=notifay::all()->where('user_id',Auth::id())->where('noty','open');
 
-        return $this->Respone($clothes,200);
+        return $this->Respone(noty::collection($clothes),200);
     }
 
    
