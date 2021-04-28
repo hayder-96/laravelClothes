@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Resources\detailclothes;
 
 class DetailClothesController extends BaseController
 {
@@ -16,7 +17,7 @@ class DetailClothesController extends BaseController
     {
         $clothes=detail_clothes::all()->where('detail_id',$id);
 
-        return $this->Respone($clothes,200);
+        return $this->Respone(detailclothes::collection($clothes),200);
 
     }
 
