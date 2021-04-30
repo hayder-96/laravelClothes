@@ -26,7 +26,7 @@ class DetailClothesController extends BaseController
 
     public function index()
     {
-        $clothes=detail_clothes::all();
+        $clothes=detail_clothes::all()->where('nummore','!=',null);
 
         return $this->Respone(detailclothes::collection($clothes),200);
 
