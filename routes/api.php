@@ -93,6 +93,8 @@ Route::middleware('auth:api')->group(function(){
 
     Route::get('getclothesuser/{id}',[DetailClothesController::class,'indexx']);
 
+
+
     
 
     Route::resource('userok',AcceptController::class);
@@ -112,6 +114,9 @@ Route::middleware('auth:api')->group(function(){
     Route::get('getnotyopen',[NotifayController::class,'indexxx']);
 
 
+
+
+    Route::resource('clothesall',DetailClothesController::class);
 });
 
 
