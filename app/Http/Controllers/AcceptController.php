@@ -6,6 +6,7 @@ use App\Models\accept as ac;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Resources\acceptResource;
 class AcceptController extends BaseController
 {
     
@@ -13,7 +14,7 @@ class AcceptController extends BaseController
     {
         $clothes=ac::all()->where('enable','no');
 
-        return $this->Respone($clothes,200);
+        return $this->Respone(acceptResource::collection($clothes),200);
     }
 
 
@@ -21,7 +22,7 @@ class AcceptController extends BaseController
     {
         $clothes=ac::all()->where('enable','yes');
 
-        return $this->Respone($clothes,200);
+        return $this->Respone(acceptResource::collection($clothes),200);
     }
 
 
