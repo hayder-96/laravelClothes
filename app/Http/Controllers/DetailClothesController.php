@@ -209,6 +209,28 @@ class DetailClothesController extends BaseController
 
 
 
+
+    public function addnum(Request $request)
+    {
+        
+        $clothes=detail_clothes::find($request->id);
+
+       $n=$clothes->nummore+$request->nummore;
+
+       $clothes->nummore=$n;
+       $clothes->save();
+        return $this->Respone($clothes,200);
+    }
+
+
+
+
+
+
+
+
+
+
     public function upnum(Request $request,$id){
 
         $clothes=detail_clothes::find($id);

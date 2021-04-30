@@ -68,6 +68,15 @@ Route::middleware('admin:admin')->group(function(){
 
     Route::get('getpeice/{id}',[DetailsPieceController::class,'indexx']);
 
+
+
+
+    Route::post('insertnum',[DetailClothesController::class,'addnum']);
+
+
+
+
+
 });
 
 
