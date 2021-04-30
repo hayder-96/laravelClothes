@@ -6,7 +6,7 @@ use App\Models\detail_clothes;
 use App\Models\DetailsPiece;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-
+use App\Http\Resources\acceptPeice;
 class DetailsPieceController extends BaseController
 {
     /**
@@ -19,7 +19,7 @@ class DetailsPieceController extends BaseController
         
         $clothes=DetailsPiece::all()->where('accept_id',$id);
 
-        return $this->Respone($clothes,200);
+        return $this->Respone(acceptPeice::collection($clothes),200);
     }
 
     /**
