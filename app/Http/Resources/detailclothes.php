@@ -36,7 +36,8 @@ class detailclothes extends JsonResource
         'number4'=>$this->number4,
         'number5'=>$this->number5,
         'number6'=>$this->number6,
-        'nummore'=>$this->nummore
+        'nummore'=>$this->nummore,
+        'type'=>$this->type
 
 
 

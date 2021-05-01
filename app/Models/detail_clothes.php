@@ -31,5 +31,6 @@ class detail_clothes extends Model
         'number5',
         'number6',
         'detail_id',
+        'type'
     ];
 }

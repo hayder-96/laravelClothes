@@ -245,6 +245,20 @@ class DetailClothesController extends BaseController
 
 
 
+    public function uptype(Request $request,$id)
+    {
+        
+        $clothes=detail_clothes::find($id);
+
+       $clothes->type=$request->type;
+
+       $clothes->save();
+        return $this->Respone($clothes,200);
+    }
+
+
+
+
 
 
 

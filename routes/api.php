@@ -76,6 +76,9 @@ Route::middleware('admin:admin')->group(function(){
 
 
 
+    Route::put('updatetype/{id}',[DetailClothesController::class,'uptype']);
+
+
 
 });
 
