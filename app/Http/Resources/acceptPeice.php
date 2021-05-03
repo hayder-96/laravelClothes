@@ -25,6 +25,7 @@ class acceptPeice extends JsonResource
         "color"=>$this->color,
         "accept_id"=>$this->accept_id,
         "image"=>$this->image,
+        'price'=>$this->price,
         "clothes_id"=>$this->clothes_id,
 
 

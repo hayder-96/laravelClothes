@@ -21,6 +21,7 @@ class CreateDetailsPiecesTable extends Migration
             $table->string('color');
             $table->unsignedBigInteger('accept_id');
             $table->string('image');
+            $table->string('price');
             $table->string('clothes_id');
             $table->foreign('accept_id')->references('id')->on('accepts')->onDelete('cascade');
             $table->timestamps();

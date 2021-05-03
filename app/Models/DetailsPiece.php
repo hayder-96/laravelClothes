@@ -16,6 +16,7 @@ class DetailsPiece extends Model
             'accept_id',
             'image',
             'clothes_id',
-            'numsize'
+            'numsize',
+            'price'
     ];
 }
