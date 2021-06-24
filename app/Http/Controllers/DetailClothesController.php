@@ -17,7 +17,9 @@ class DetailClothesController extends BaseController
     {
         $clothes=detail_clothes::all()->where('detail_id',$id);
 
-        return $this->Respone(detailclothes::collection($clothes),200);
+        //return $this->Respone(detailclothes::collection($clothes),200);
+
+        return response()->json(  $clothes );
 
     }
 
