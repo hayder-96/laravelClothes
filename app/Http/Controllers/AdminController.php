@@ -34,12 +34,12 @@ class AdminController extends BaseController
         $input['password']= Crypt::encrypt( $input['password']);
        
         $user=admin::create($input);
-         $success['token']=$user->createToken('hx/.<["kdkjvc823=-)c')->accessToken;
+         $success=$user->createToken('hx/.<["kdkjvc823=-)c')->accessToken;
         
           
     
-        return $this->Respone($success,200);
-    
+        //return $this->Respone($success,200);
+        return response()->json(['token' => $success], 200);
         
     }
     
@@ -62,15 +62,15 @@ class AdminController extends BaseController
        
         if($users===$request->password && $user->email===$request->email){
             try{
-         $succes['token']=$user->createToken('hx/.<["kdkjvc823=-)c')->accessToken;
+         $succes=$user->createToken('hx/.<["kdkjvc823=-)c')->accessToken;
     
          }catch(Exception $e){
     
              return $this->Respone($e,$succes);
     
          }
-             return $this->Respone($succes,200);
-    
+           //  return $this->Respone($succes,200);
+             return response()->json(['token' => $succes], 200);
     
     
         }else{
