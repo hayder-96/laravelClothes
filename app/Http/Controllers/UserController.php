@@ -34,7 +34,7 @@ class UserController  extends BaseController
         $input['password']= Crypt::encrypt( $input['password']);
        
         $user=User::create($input);
-         $success['token']=$user->createToken('ihf76}{Pjks-0=+-aq')->accessToken;
+         $success=$user->createToken('ihf76}{Pjks-0=+-aq')->accessToken;
         
           
     
