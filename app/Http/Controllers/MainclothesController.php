@@ -15,7 +15,8 @@ class MainclothesController extends BaseController
     public function index()
     {
         $clothes=mainclothes::all();
-        return $this->Respone($clothes,200);
+      //  return $this->Respone($clothes,200);
+         return response()->json(  $clothes );
     }
 
    
